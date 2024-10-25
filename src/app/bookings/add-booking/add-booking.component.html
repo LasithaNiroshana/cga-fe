@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">Add Booking</mat-toolbar>
+
+<!-- Add booking form -->
+<div class="add-booking">
+    <mat-form-field class="add-booking-field">
+        <mat-label>Customer Name*</mat-label>
+        <input type="text" matInput placeholder="John Cena" [(ngModel)]="booking.customer_name" name="customer_name" value="{{booking.customer_name}}">
+      </mat-form-field>
+      <mat-form-field class="add-booking-field">
+        <mat-label>Mobile*</mat-label>
+        <input type="text" matInput placeholder="07112341234" [(ngModel)]="booking.mobile" name="mobile" value="{{booking.mobile}}">
+      </mat-form-field>
+        <mat-form-field class="add-booking-field">
+            <mat-label>Booking Date*</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <button mat-raised-button color="primary" class="add-booking-field">Add Booking</button>
+</div>
+  <br>

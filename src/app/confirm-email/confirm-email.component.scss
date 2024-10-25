@@ -1,0 +1,37 @@
+.confirm-card {
+    max-width: 600px;
+  }
+  
+.image{
+    width:120px;
+    height:120px;
+}
+  
+  .center-content{
+    text-align: -webkit-center;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .confirm-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    // text-align: webkit;
+  }
+  
+  .confirm-full-width {
+    width: 100%;
+  }
+  
+  .confirmbtn{
+    width: 80%;
+    // background-color: blue;
+  }
+
+  .form-fields{
+    text-align: left;
+  }

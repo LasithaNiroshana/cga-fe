@@ -1,0 +1,30 @@
+<div class="center-content">
+
+    <!-- Sign in card -->
+      <mat-card class="confirm-card">
+        <!-- Header title and image  -->
+          <div>
+              <h2>
+                  Enter Verification Code
+              </h2>
+              <!-- <img class="image" src=""> -->
+          </div>
+        <mat-card-header>
+        </mat-card-header>
+        
+        <mat-card-content>
+          <form class="confirm-form">
+
+                <p class="field-titles">We have sent you a verification code to {{'lasitha.n@ambrumsolutions.com'}}</p>
+
+                    <ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="{length:6}" class="confirm-full-width"></ng-otp-input>
+
+                    <br>
+              <a mat-raised-button class="confirmbtn" target="_blank" color="primary" (click)="verify()">Verify</a>
+            </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <!-- <div class="overlay-wrapper">
+      <mat-progress-spinner [mode]="'indeterminate'" *ngIf="loading$ | async"></mat-progress-spinner>
+    </div> -->

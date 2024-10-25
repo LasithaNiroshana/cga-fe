@@ -1,0 +1,49 @@
+<div class="center-content">
+
+    <!-- Sign in card -->
+      <mat-card class="login-card">
+        <!-- Header title and image  -->
+          <div>
+              <h2>
+                  Login
+              </h2>
+              <!-- <img class="image" src=""> -->
+          </div>
+        <mat-card-header>
+        </mat-card-header>
+        
+        <mat-card-content>
+          <form class="login-form">
+
+                <p class="field-titles">Email</p>
+                <mat-form-field class="login-full-width">
+                    <!-- <mat-label>Enter username:</mat-label> -->
+                      <input matInput type="email" placeholder="lasitha.n@ambrumsolutions.com" [(ngModel)]="user.email" name="username" value="{{user.email}}">
+                      <!-- <mat-icon matSuffix>email</mat-icon> -->
+                    </mat-form-field>
+
+                    <p class="field-titles">Password</p>
+                  <mat-form-field class="login-full-width">
+                    <!-- <mat-label>Enter your password</mat-label> -->
+                    <input matInput [type]="hide ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                  </mat-form-field>
+
+                  <mat-checkbox class="field-titles">Remember Me</mat-checkbox>
+              <br>
+              <a href="">Forgot Password?</a>
+              <!-- <a>Forgot Password?</a> -->
+              <!-- <br><br> -->
+               <br><br>
+              <a mat-raised-button class="loginbtn" target="_blank" color="primary" (click)="logIn()">LOGIN</a>
+              <br><br>
+              <p>Don't have an account? <a href="">Sign Up</a></p>
+            </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <!-- <div class="overlay-wrapper">
+      <mat-progress-spinner [mode]="'indeterminate'" *ngIf="loading$ | async"></mat-progress-spinner>
+    </div> -->
